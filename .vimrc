@@ -1,5 +1,14 @@
+"----------------------------------------
+" VIMRC Config - ENDRILPC
+"----------------------------------------
+
 set vb t_vb=
 set encoding=utf-8
+set number relativenumber
+
+"----------------------------------------
+" VIMPLUG 
+"----------------------------------------
 
 call plug#begin('~/.vim/plugged')
 Plug 'valloric/youcompleteme'
@@ -16,12 +25,16 @@ Plug 'chiel92/vim-autoformat'
 Plug 'pprovost/vim-ps1'
 call plug#end()
 
-set number relativenumber
+"----------------------------------------
+" Terraform Format
+"----------------------------------------
 
-"terraform
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
 
+"----------------------------------------
 "Format JSON
+"----------------------------------------
+
 com! FormatJSON %!python -m json.tool
 "nmap =j :%!python -m json.tool<CR>
