@@ -7,6 +7,13 @@ set encoding=utf-8
 set number relativenumber
 
 "----------------------------------------
+" VIMRC Alias Remaps
+"----------------------------------------
+
+" Sudo Write
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+
+"----------------------------------------
 " VIMPLUG 
 "----------------------------------------
 
